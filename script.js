@@ -1,5 +1,9 @@
 let input = document.getElementById("new-task");
 let enterTask = document.getElementById("enterTask");
+
+let taskCount = document.getElementById("taskCount");
+
+
 let tasks = [];
 
 function displayTask() {
@@ -7,6 +11,8 @@ function displayTask() {
   enterTask.innerHTML = "";
 
   for (let i = 0; i < tasks.length; i++) {
+
+    taskCount.textContent = `${i +1} TASKS`
     enterTask.innerHTML += `<li class="todo">
           <span class="todo__text"> ${tasks[i]} </span>
           <div class="todo__actions">
